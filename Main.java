@@ -27,12 +27,31 @@ public class Main {
     System.out.println();
     System.out.println(totalScore.size()+ " students took the SAT");
 
+    // Find average score
     int total = 0;
     for (int score : totalScore){
       total += score;
     }
     double average = (double)total / totalScore.size();
     System.out.println(average);
+
+    // Find the lowest score
+    int min = Integer.MAX_VALUE;
+    for (int score : totalScore){
+      if (score < min){
+        min = score;
+      }
+    }
+    System.out.println("The lowest score is "+ min);
+
+    // Find the highest score
+    int max = 0;
+    for (int score : totalScore){
+      if (score > max){
+        max = score;
+      }
+    }
+    System.out.println("The highest score is "+ max);
   }
 
 }
